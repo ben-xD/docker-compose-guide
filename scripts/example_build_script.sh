@@ -4,3 +4,6 @@
 set -euxo pipefail
 
 echo "Example build script"
+echo "username: $USERNAME"
+echo "token: $TOKEN"
+# This is where you could use your username and token to download files or install dependencies.
