@@ -1,0 +1,16 @@
+services:
+  development:
+    build:
+      context: "./"
+      dockerfile: Dockerfile
+      args:
+      # Optional credentials used during image build.
+       - USERNAME
+       - TOKEN
+    env_file:
+     - .env
+    command: "tail -f /dev/null"
+    # Specify a platform if some of your binaries only work on certain platforms. e.g. linux/amd64, linux/arm64
+    # platform: linux/amd64 
+    volumes:
+     - .:/workspace
